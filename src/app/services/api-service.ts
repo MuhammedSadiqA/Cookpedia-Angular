@@ -14,4 +14,12 @@ export class ApiService {
   getAllRecipeAPI(){
     return this.http.get(`${this.server_url}/recipes`)
   }
+
+  // register : called by register component
+  registerAPI(user:any){
+    return this.http.post(`${this.server_url}/register`,user)
+  }
+
+
+
 }
